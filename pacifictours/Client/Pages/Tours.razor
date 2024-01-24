@@ -1,0 +1,46 @@
+﻿@page "/tours "
+@using pacifictours.Shared
+@inject HttpClient Http
+<h3>Tours</h3>
+@if (tours.Count <= 0)
+{
+	<span>Loading Tours…</span>
+}
+else
+{
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Code</th>
+				
+				<th>Full Name</th>
+				<th>Address</th>
+				<th>Joining Date </th>
+			</tr>
+		</thead>
+		<tbody>
+			@foreach (var tour in tours)
+			{
+				<tr>
+					<td width="5%">@tour.Id</td>
+					<td width="5%">@tour.tourname</td>
+					<td width="10%">@tour.price</td>
+					<td width="10%">@tour.spaces</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+}
+
+@code {
+	List<Tour> tours = new List<Tour>();
+ protected override async Task OnInitializedAsync()
+	{
+		var result = await Http.GetFromJsonAsync<List<Tour>>("/api/tour");
+		if (result != null)
+		{
+			tours = result;
+		}
+	}
+}
