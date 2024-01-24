@@ -10,8 +10,8 @@ using pacifictours.Server.Data;
 
 namespace pacifictours.Server.Migrations
 {
-    [DbContext(typeof(HotelContext))]
-    [Migration("20240124132135_InitialCreate")]
+    [DbContext(typeof(DataContext))]
+    [Migration("20240124151116_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -51,6 +51,29 @@ namespace pacifictours.Server.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Hotels");
+                });
+
+            modelBuilder.Entity("pacifictours.Shared.Tour", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("price")
+                        .HasColumnType("int");
+
+                    b.Property<int>("spaces")
+                        .HasColumnType("int");
+
+                    b.Property<string>("tourname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tours");
                 });
 #pragma warning restore 612, 618
         }

@@ -10,8 +10,8 @@ namespace pacifictours.Server.Controllers
 	[ApiController]
     public class TourController : ControllerBase
     {
-        private readonly HotelContext _context;
-        public TourController(HotelContext context)
+        private readonly DataContext _context;
+        public TourController(DataContext context)
         {
             _context = context;
         }
@@ -20,7 +20,7 @@ namespace pacifictours.Server.Controllers
         public async Task<ActionResult<List<Tour>>> GetAllTours()
         {
 
-            var list = await _context.Tour.ToListAsync();
+            var list = await _context.Tours.ToListAsync();
             return Ok(list);
 
 

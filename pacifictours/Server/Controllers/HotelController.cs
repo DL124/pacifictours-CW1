@@ -10,8 +10,8 @@ namespace pacifictours.Server.Controllers
 	[ApiController]
 	public class HotelController : ControllerBase
 	{
-		private readonly HotelContext _context;
-		public HotelController(HotelContext context)
+		private readonly DataContext _context;
+		public HotelController(DataContext context)
 		{
 			_context = context;
 		}

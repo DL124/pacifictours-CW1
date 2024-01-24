@@ -1,4 +1,4 @@
-﻿@page "/hotel"
+﻿@page "/hotels"
 @using pacifictours.Shared
 @inject HttpClient Http
 <h3>Hotels</h3>
@@ -12,11 +12,11 @@ else
 		<thead>
 			<tr>
 				<th>ID</th>
-				<th>Code</th>
-				
-				<th>Full Name</th>
-				<th>Address</th>
-				<th>Joining Date </th>
+				<th>Name</th>
+				<th>Single price (£)</th>
+				<th>Double price (£)</th>
+				<th>Family suite (£)</th>
+				<th>Available rooms</th>
 			</tr>
 		</thead>
 		<tbody>

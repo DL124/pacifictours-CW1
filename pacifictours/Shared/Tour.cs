@@ -12,7 +12,7 @@ namespace pacifictours.Shared
 		public int Id { get; set; }
 		[Required]
 		
-		public string tourname { get; set; }
+		public required string tourname { get; set; }
 
 		public int price { get; set; }
 

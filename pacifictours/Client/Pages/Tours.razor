@@ -1,4 +1,4 @@
-﻿@page "/tours "
+﻿@page "/tours"
 @using pacifictours.Shared
 @inject HttpClient Http
 <h3>Tours</h3>
@@ -10,13 +10,10 @@ else
 {
 	<table>
 		<thead>
-			<tr>
-				<th>ID</th>
-				<th>Code</th>
-				
-				<th>Full Name</th>
-				<th>Address</th>
-				<th>Joining Date </th>
+			<tr>	
+				<th>Tour name</th>
+				<th>Price (£)</th>
+				<th>Available spaces</th>
 			</tr>
 		</thead>
 		<tbody>
