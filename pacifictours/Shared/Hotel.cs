@@ -9,10 +9,10 @@ namespace pacifictours.Shared
 {
 	public class Hotel
 	{
-		public int Id { get; set; }
-		[Required]
+		public required int Id { get; set; }
 		
-		public string name { get; set; }
+		public required string name { get; set; }
+		
 		public int singleprice {  get; set; }
 
 		public int doubleprice { get; set; }
@@ -20,7 +20,6 @@ namespace pacifictours.Shared
 		public int familyprice { get; set; }
 
 		public int rooms { get; set; }
-
 
 	}
 }

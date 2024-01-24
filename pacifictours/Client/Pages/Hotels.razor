@@ -11,7 +11,6 @@ else
 	<table>
 		<thead>
 			<tr>
-				<th>ID</th>
 				<th>Name</th>
 				<th>Single price (£)</th>
 				<th>Double price (£)</th>
@@ -23,12 +22,11 @@ else
 			@foreach (var hotel in hotels)
 			{
 				<tr>
-					<td width="5%">@hotel.Id</td>
-					<td width="5%">@hotel.name</td>
-					<td width="10%">@hotel.singleprice</td>
-					<td width="10%">@hotel.doubleprice</td>
-					<td width="5%">@hotel.familyprice</td>
-					<td width="5%">@hotel.rooms</td>
+					<td width="2%">@hotel.name</td>
+					<td width="2%">@hotel.singleprice</td>
+					<td width="2%">@hotel.doubleprice</td>
+					<td width="2%">@hotel.familyprice</td>
+					<td width="2%">@hotel.rooms</td>
 				</tr>
 			}
 		</tbody>

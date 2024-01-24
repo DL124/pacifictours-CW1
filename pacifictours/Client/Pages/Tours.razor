@@ -14,16 +14,16 @@ else
 				<th>Tour name</th>
 				<th>Price (£)</th>
 				<th>Available spaces</th>
+
 			</tr>
 		</thead>
 		<tbody>
 			@foreach (var tour in tours)
 			{
 				<tr>
-					<td width="5%">@tour.Id</td>
-					<td width="5%">@tour.tourname</td>
-					<td width="10%">@tour.price</td>
-					<td width="10%">@tour.spaces</td>
+					<td width="2%">@tour.tourname</td>
+					<td width="2%">@tour.price</td>
+					<td width="2%">@tour.spaces</td>
 				</tr>
 			}
 		</tbody>

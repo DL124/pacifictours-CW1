@@ -16,7 +16,6 @@ namespace pacifictours.Server.Controllers
             _context = context;
         }
 
-
         public async Task<ActionResult<List<Tour>>> GetAllTours()
         {
 

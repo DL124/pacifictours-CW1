@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pacifictours.Server", "pacifictours\Server\pacifictours.Server.csproj", "{B99DA969-3734-4D0C-963D-2B4EF5BACCC4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pacifictours.Server", "pacifictours\Server\pacifictours.Server.csproj", "{B99DA969-3734-4D0C-963D-2B4EF5BACCC4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pacifictours.Client", "pacifictours\Client\pacifictours.Client.csproj", "{895D0F83-E063-49D0-82C1-33209C297B71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pacifictours.Client", "pacifictours\Client\pacifictours.Client.csproj", "{895D0F83-E063-49D0-82C1-33209C297B71}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pacifictours.Shared", "pacifictours\Shared\pacifictours.Shared.csproj", "{3F3706BF-8EB9-4042-9D9D-E35D6214F005}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pacifictours.Shared", "pacifictours\Shared\pacifictours.Shared.csproj", "{3F3706BF-8EB9-4042-9D9D-E35D6214F005}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
