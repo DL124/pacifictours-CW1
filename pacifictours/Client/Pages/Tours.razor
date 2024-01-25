@@ -32,7 +32,7 @@ else
 
 @code {
 	List<Tour> tours = new List<Tour>();
- protected override async Task OnInitializedAsync()
+	protected override async Task OnInitializedAsync()
 	{
 		var result = await Http.GetFromJsonAsync<List<Tour>>("/api/tour");
 		if (result != null)

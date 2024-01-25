@@ -25,5 +25,14 @@ namespace pacifictours.Server.Controllers
 
 
 		}
+		[HttpPost]
+		public async Task<ActionResult<List<Order>>> AddOrder(Order hotelorder)
+		{
+			_context.CustomerOrder.Add(hotelorder);
+			await _context.SaveChangesAsync();
+
+			return await GetAllOrders();
+		}
+
 	}
 }

@@ -17,7 +17,5 @@ namespace pacifictours.Server.Data
 		public DbSet<Order> CustomerOrder
 		{ get; set; }
 
-		public DbSet<Order> Customer
-		{ get; set; }
 	}
 }

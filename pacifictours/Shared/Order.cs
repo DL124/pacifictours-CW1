@@ -13,10 +13,18 @@ namespace pacifictours.Shared
 		public int TourId { get; set; }
 
 		public int HotelId { get; set; }
+		
+		public int Price { get; set; }
 
 		public int CustomerId { get; set; }
+		
+		public required string name { get; set; }
+		
+		public int passportNum { get; set; }
+		
+		public int contactNum { get; set; }
 
-		public int Price { get; set; }
+		
 
 	}
 }

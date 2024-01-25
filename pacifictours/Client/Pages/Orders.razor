@@ -1,0 +1,54 @@
+﻿@page "/orders"
+@inject NavigationManager NavigationManager
+@using pacifictours.Shared;
+@inject HttpClient Http
+
+
+@if(orderlist is null)
+{
+<h3>Orders</h3>
+
+<button @onclick="AddOrder" class="btn btn-primary">Create order</button>
+	<br/>
+}
+
+else
+{
+	<table>
+		<thead>
+			
+			<button @onclick="AddOrder">Make order</button>
+			<tr>
+				<th>Customer ID</th>
+				<th>Tour</th>
+				<th>Hotel</th>
+				<th> </th>
+			</tr>
+		</thead>
+	</table>
+}
+
+	
+
+@code {
+	void AddOrder()
+	{
+		NavigationManager.NavigateTo("/makeorder");
+	}
+	public int? Id { get; set; }
+
+	List<Order> orderlist = new List<Order>();
+ 
+	protected override async Task OnInitializedAsync()
+	{
+		var result = await Http.GetFromJsonAsync<List<Order>>("/api/order");
+		if (result != null)
+		{
+			orderlist = result;
+		}
+	}
+	void EditOrder(int id)
+	{
+		NavigationManager.NavigateTo($"/order/{id}");
+	}
+}

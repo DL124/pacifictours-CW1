@@ -1,0 +1,44 @@
+﻿@page "/makeorder"
+@page "/makeorder/{id:int}"
+@using pacifictours.Shared;
+@inject NavigationManager NavigationManager
+@inject HttpClient Http
+
+
+
+@if(Id is null)
+{
+<PageTitle> Create a new order </PageTitle>
+<h3>Add a New Employee </h3>
+}
+else{
+	<PageTitle> Edit @order.name</PageTitle>
+	<h3>Edit @order.name</h3>
+}
+<EditForm Model = "order" OnSubmit="HandleSubmit">
+	<div>	
+		<label for = "Id">Id</label>
+		<InputNumber id = "Id" @bind-Value = "order.Id" class = "from-control" />
+	</div> <br />
+	<button type="submit" class="btn btn-primary">Save</button>
+</EditForm>
+
+@code {
+	[Parameter] 
+	public int? Id { get; set; }
+	Order order = new Order { name = "New order" };
+	async Task HandleSubmit()
+	{
+		if (Id is null)
+		{
+			await Http.PostAsJsonAsync("api/order", order);
+		}
+		else
+		{
+			await Http.PutAsJsonAsync($"api/order/{Id}", order);
+		}
+	}
+	
+
+}
+
