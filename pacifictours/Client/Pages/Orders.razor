@@ -19,12 +19,24 @@ else
 			
 			<button @onclick="AddOrder">Make order</button>
 			<tr>
-				<th>Customer ID</th>
-				<th>Tour</th>
 				<th>Hotel</th>
-				<th> </th>
+				<th>Hotel room</th>
+				<th>Tour</th>
+				<th>Tour name</th>
 			</tr>
 		</thead>
+
+		<tbody>
+			@foreach (var order in orderlist)
+			{
+				<tr>
+					<td width="2%">@order.HotelId</td>
+					<td width="3%">@order.roomType</td>
+					<td width="3%">@order.TourId</td>
+					<td width="3%">@order.tourType</td>
+				</tr>
+			}
+		</tbody>
 	</table>
 }
 
@@ -47,8 +59,5 @@ else
 			orderlist = result;
 		}
 	}
-	void EditOrder(int id)
-	{
-		NavigationManager.NavigateTo($"/order/{id}");
-	}
+	
 }

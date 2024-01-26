@@ -80,6 +80,10 @@ namespace pacifictours.Server.Migrations
                     b.Property<int>("passportNum")
                         .HasColumnType("int");
 
+                    b.Property<string>("roomType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("CustomerOrder");

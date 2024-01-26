@@ -11,7 +11,7 @@ using pacifictours.Server.Data;
 namespace pacifictours.Server.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20240125214046_InitialCreate")]
+    [Migration("20240126120956_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -82,6 +82,10 @@ namespace pacifictours.Server.Migrations
 
                     b.Property<int>("passportNum")
                         .HasColumnType("int");
+
+                    b.Property<string>("roomType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

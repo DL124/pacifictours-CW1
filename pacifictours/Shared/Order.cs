@@ -24,7 +24,10 @@ namespace pacifictours.Shared
 		
 		public int contactNum { get; set; }
 
-		
+		public string roomType { get; set; }
+
+		public string tourType { get; set; }
+
 
 	}
 }

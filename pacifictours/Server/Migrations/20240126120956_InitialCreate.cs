@@ -22,7 +22,8 @@ namespace pacifictours.Server.Migrations
                     CustomerId = table.Column<int>(type: "int", nullable: false),
                     name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     passportNum = table.Column<int>(type: "int", nullable: false),
-                    contactNum = table.Column<int>(type: "int", nullable: false)
+                    contactNum = table.Column<int>(type: "int", nullable: false),
+                    roomType = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

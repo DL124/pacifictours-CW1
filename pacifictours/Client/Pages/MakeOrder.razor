@@ -17,10 +17,37 @@ else{
 }
 <EditForm Model = "order" OnSubmit="HandleSubmit">
 	<div>	
-		<label for = "Id">Id</label>
-		<InputNumber id = "Id" @bind-Value = "order.Id" class = "from-control" />
+		<label for = "HotelNumber">Hotel number</label>
+		<InputNumber id = "HotelNumber" @bind-Value = "order.HotelId" class = "from-control" />
 	</div> <br />
-	<button type="submit" class="btn btn-primary">Save</button>
+
+	<div>
+		<label for="hotelname">Hotel name</label>
+		<InputText id="hotelname" @bind-Value="order.roomType" class="from-control" />
+	</div> <br />
+
+	<div>
+		<label for="TourNumber">Tour number</label>
+		<InputNumber id="TourNumber" @bind-Value="order.TourId" class="from-control" />
+	</div> <br />
+
+	<div>
+		<label for="tourname">Tour name</label>
+		<InputText id="tourname" @bind-Value="order.tourType" class="from-control" />
+	</div> <br />
+
+	<div>
+		<label for="PhoneNum">Phone number</label>
+		<InputNumber id="PhoneNum" @bind-Value="order.contactNum" class="from-control" />
+	</div> <br />
+
+	<div>
+		<label for="PassportNum">Passport number</label>
+		<InputNumber id="PassportNum" @bind-Value="order.passportNum" class="from-control" />
+	</div> <br />
+
+
+	<button type="submit" class="btn btn-primary">Place order</button>
 </EditForm>
 
 @code {
